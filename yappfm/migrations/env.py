@@ -20,6 +20,10 @@ fileConfig(config.config_file_name)
 from yappfm.config import settings
 from yappfm.models import db
 
+# from yappfm.main import load_modules
+from yappfm.models.users import User
+
+# load_modules()
 config.set_main_option("sqlalchemy.url", str(settings.DB_DSN))
 target_metadata = db
 

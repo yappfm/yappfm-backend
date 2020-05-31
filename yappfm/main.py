@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 
 
 def load_modules(app=None):
-    for ep in entry_points()["yappfm.modules"]:
+    for ep in entry_points()["yappfm.models"]:
         logger.info(f"Loading module: {ep.name}")
         mod = ep.load()
         if app:
@@ -23,4 +23,5 @@ def get_app():
     """Main FastAPI ASGI application."""
     app = FastAPI(title="GINO FastAPI Demo")
     db.init_app(app)
+    load_modules(app)
     return app
