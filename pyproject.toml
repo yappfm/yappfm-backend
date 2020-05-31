@@ -9,10 +9,17 @@ license = "AGPL-3.0"
 python = "^3.8"
 fastapi = "^0.55.1"
 gino = {extras = ["starlette"], version = "^1.0.0"}
+pytest = "^5.4.2"
+alembic = "^1.4.2"
+psycopg2 = "^2.8.5"
+uvicorn = "^0.11.5"
+gunicorn = "^20.0.4"
 
 [tool.poetry.dev-dependencies]
 black = "^19.10b0"
 mypy = "^0.770"
+pylint = "^2.5.2"
+ipython = "^7.15.0"
 
 [build-system]
 requires = ["poetry>=0.12"]
