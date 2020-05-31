@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "yappfm"
+version = "1.0.0"
+description = "🎙"
+authors = ["Iván Martín <ivanmartin@gmail.com>, Marcos Gabarda <hey@marcosgabarda.com>"]
+license = "AGPL-3.0"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.55.1"
+gino = {extras = ["starlette"], version = "^1.0.0"}
+
+[tool.poetry.dev-dependencies]
+black = "^19.10b0"
+mypy = "^0.770"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
